@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  font-family: "Karla", sans-serif;
+}
+
+main {
+  min-height: 100vh;
+  padding: 4.5em 0;
+  background-color: hsl(204, 43%, 93%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container {
+  max-width: 635px;
+  width: 82.93%;
+  border-radius: 10px;
+  overflow: hidden;
+
+  box-shadow: 0 0px 30px 10px hsl(204, 43%, 85%, 80%);
+
+  display: grid;
+  grid-template:
+    "com com" auto
+    "sub details" auto
+    / 1fr 1fr;
+}
+
+.container-inn {
+  padding: 2.5em;
+}
+
+.container-inn.__community {
+  grid-area: com;
+  background-color: white;
+}
+.container-inn.__sub {
+  grid-area: sub;
+  background-color: #2bb3b1;
+}
+.container-inn.__details {
+  grid-area: details;
+  background-color: #4abebd;
+}
+
+.__community h1 {
+  font-size: 1.5rem;
+  letter-spacing: -0.35px;
+  font-weight: 700;
+  color: hsl(179, 62%, 43%);
+}
+.__community .secondery {
+  padding-top: 1.34em;
+  color: hsl(71, 73%, 54%);
+}
+
+.secondery {
+  font-size: 1.125rem;
+  letter-spacing: -0.2px;
+  font-weight: 700;
+  color: white;
+}
+
+.__community p {
+  padding-top: 0.625em;
+  letter-spacing: -0.2px;
+  line-height: 26px;
+  color: hsl(218, 22%, 67%);
+}
+
+.__sub {
+  color: white;
+  font-weight: 700;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.sub__price {
+  padding-top: 1em;
+
+  display: flex;
+  align-items: center;
+}
+
+.sub__price .price {
+  font-size: 2rem;
+  letter-spacing: -0.3px;
+}
+.sub__price span:nth-child(2) {
+  padding-left: 0.625em;
+  color: #88e8e7;
+  letter-spacing: -0.3px;
+}
+
+.__sub p {
+  padding: 0.5em 0 1.875em;
+  font-weight: 400;
+  letter-spacing: -0.2px;
+  color: #beffff;
+}
+
+.__sub button {
+  margin-top: auto;
+  padding: 0.94em 0;
+  border-radius: 5px;
+  cursor: pointer;
+
+  color: white;
+  background-color: hsl(71, 73%, 54%);
+  font-weight: 700;
+  box-shadow: 0 5px 10px 2px rgba(106, 106, 106, 0.354);
+
+  border: none;
+  outline: none;
+
+  transition: linear 0.3s transform;
+}
+
+.details-box {
+  padding-top: 1em;
+  color: #beffff;
+}
+.details-box p + p {
+  padding-top: 0.2em;
+}
+.__sub button:hover {
+  transform: scale(1.03, 1.03);
+}
+@media (max-width: 42rem) {
+  .main-container {
+    grid-template:
+      "com" auto
+      "sub" auto
+      "details" auto
+      / 1fr;
+  }
+  .container-inn {
+    padding: 1.5em;
+  }
+  .__community h1 {
+    font-size: 1.25rem;
+  }
+  .__community p {
+    padding-top: 1.06em;
+    letter-spacing: -0.5px;
+  }
+  .details-box {
+    font-size: 0.8rem;
+  }
+}
